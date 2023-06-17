@@ -8,7 +8,7 @@ export interface HeroElementProps {
   children: React.ReactNode;
 }
 
-const Hero: React.FC<HeroProps> = ({ children }) => {
+export const Hero: React.FC<HeroProps> = ({ children }) => {
   return <div className="text-center">{children}</div>;
 };
 
@@ -19,5 +19,3 @@ export const HeroTitle: React.FC<HeroElementProps> = ({ children }) => {
 export const HeroSubTitle: React.FC<HeroElementProps> = ({ children }) => {
   return <h1 className="text-xl mb-12">{children}</h1>;
 };
-
-export default Hero;
