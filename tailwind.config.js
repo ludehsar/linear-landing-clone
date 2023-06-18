@@ -17,10 +17,12 @@ module.exports = {
       "5xl": ["8rem", "1"],
     },
     colors: {
+      transparent: "transparent",
       background: "#000212",
       "white-a08": "rgba(255, 255, 255, 0.08)",
       white: "#fff",
       grey: "#8a8f98",
+      "dark-grey": "#222326",
     },
     spacing: {
       0: "0",
@@ -36,6 +38,7 @@ module.exports = {
       10: "4rem",
       11: "4.4rem",
       12: "4.8rem",
+      "navigation-height": "var(--navigation-height)",
     },
     backgroundImage: {
       "primary-gradiant":
