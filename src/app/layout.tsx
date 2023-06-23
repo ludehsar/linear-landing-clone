@@ -1,4 +1,4 @@
-import { Container, Header } from "@/components";
+import { Container, Footer, Header } from "@/components";
 import "./globals.css";
 
 export const metadata = {
@@ -23,9 +23,7 @@ export default function RootLayout({
         <div>
           <Header />
           <main className="pt-navigation-height">{children}</main>
-          <footer>
-            <Container>Footer</Container>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
