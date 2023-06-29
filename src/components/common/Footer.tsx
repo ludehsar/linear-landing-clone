@@ -58,16 +58,16 @@ export const Footer = () => (
       <div>
         <div className="flex h-full flex-row lg:flex-col items-center justify-between">
           <Link href="#">
-            <Logo className="h-4 text-grey" />
+            <Logo className="h-4 text-grey hover:text-white transition-colors" />
           </Link>
           <div className="mt-auto flex space-x-4 text-grey items-center">
-            <Link href="#">
+            <Link href="#" className="hover:text-white transition-colors">
               <AiOutlineTwitter size={24} />
             </Link>
-            <Link href="#">
+            <Link href="#" className="hover:text-white transition-colors">
               <AiOutlineGithub size={24} />
             </Link>
-            <Link href="#">
+            <Link href="#" className="hover:text-white transition-colors">
               <AiOutlineSlack size={24} />
             </Link>
           </div>
@@ -83,7 +83,10 @@ export const Footer = () => (
             <ul>
               {column.links.map((link) => (
                 <li className="[&_a]:last:mb-0" key={link.title}>
-                  <Link className="text-grey mb-3 block" href={link.href}>
+                  <Link
+                    className="text-grey mb-3 block hover:text-white transition-colors"
+                    href={link.href}
+                  >
                     {link.title}
                   </Link>
                 </li>
