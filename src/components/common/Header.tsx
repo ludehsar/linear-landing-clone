@@ -18,6 +18,18 @@ export const Header = () => {
       ?.classList.toggle("overflow-hidden", isHamburgerMenuOpen);
   }, [isHamburgerMenuOpen]);
 
+  useEffect(() => {
+    const closeHamburgerNavigation = () => setIsHamburgerMenuOpen(false);
+
+    window.addEventListener("orientationchange", closeHamburgerNavigation);
+    window.addEventListener("resize", closeHamburgerNavigation);
+
+    return () => {
+      window.removeEventListener("orientationchange", closeHamburgerNavigation);
+      window.removeEventListener("resize", closeHamburgerNavigation);
+    };
+  }, []);
+
   return (
     <header className="fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[12px]">
       <Container className="flex items-center h-navigation-height">
