@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "./Container";
 import { Logo } from "../icons";
 import Link from "next/link";
@@ -11,6 +11,12 @@ import classNames from "classnames";
 export const Header = () => {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] =
     useState<boolean>(false);
+
+  useEffect(() => {
+    document
+      .querySelector("html")
+      ?.classList.toggle("overflow-hidden", isHamburgerMenuOpen);
+  }, [isHamburgerMenuOpen]);
 
   return (
     <header className="fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[12px]">

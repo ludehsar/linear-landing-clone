@@ -19,7 +19,7 @@ export default function RootLayout({
           content="width=device-width, height=device-height, initial-scale=1"
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <div>
           <Header />
           <main className="pt-navigation-height">{children}</main>
