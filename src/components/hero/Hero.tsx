@@ -13,9 +13,15 @@ export const Hero: React.FC<HeroProps> = ({ children }) => {
 };
 
 export const HeroTitle: React.FC<HeroElementProps> = ({ children }) => {
-  return <h1 className="text-5xl my-6">{children}</h1>;
+  return (
+    <h1 className="text-6xl md:text-8xl my-6 text-gradiant">{children}</h1>
+  );
 };
 
 export const HeroSubTitle: React.FC<HeroElementProps> = ({ children }) => {
-  return <h1 className="text-xl mb-12">{children}</h1>;
+  return (
+    <p className="md:text-xl text-lg mb-12 text-primary-text font-normal">
+      {children}
+    </p>
+  );
 };

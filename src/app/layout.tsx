@@ -22,7 +22,9 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <div>
           <Header />
-          <main className="pt-navigation-height">{children}</main>
+          <main className="pt-navigation-height bg-main-gradiant">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

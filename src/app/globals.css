@@ -8,7 +8,7 @@
   }
 
   html {
-    @apply bg-background font-sans text-white;
+    @apply bg-background font-sans text-offwhite;
     font-size: 62.5%;
   }
 }
@@ -16,5 +16,16 @@
 @layer utilities {
   .text-shadow {
     text-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+  }
+
+  .text-gradiant {
+    background: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255) 30%,
+      rgba(255, 255, 255, 0.38)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }

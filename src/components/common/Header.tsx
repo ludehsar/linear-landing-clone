@@ -31,7 +31,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[12px]">
+    <header className="fixed top-0 left-0 w-full border-b border-transparent-white backdrop-blur-[12px]">
       <Container className="flex items-center h-navigation-height">
         <Link href="/">
           <Logo />
@@ -53,7 +53,7 @@ export const Header = () => {
             <ul
               className={classNames(
                 "flex flex-col md:flex-row md:items-center h-full [&_li]:ml-6 [&_li]:border-b [&_li]:border-dark-grey md:[&_li]:border-none",
-                "[&_a]:flex [&_a]:items-center [&_a]:h-navigation-height [&_a]:w-full [&_a]:text-md md:[&_a]:text-sm [&_a:hover]:text-grey [&_a]:translate-y-8 [&_a]:transition-[transform,color] [&_a]:md:transition-colors md:[&_a]:translate-y-0 [&_a]:duration-300 ease-in",
+                "[&_a]:flex [&_a]:items-center [&_a]:h-navigation-height [&_a]:w-full [&_a]:text-md md:[&_a]:text-md [&_a:hover]:text-grey [&_a]:translate-y-8 [&_a]:transition-[transform,color] [&_a]:md:transition-colors md:[&_a]:translate-y-0 [&_a]:duration-300 ease-in",
                 isHamburgerMenuOpen && "[&_a]:translate-y-0"
               )}
             >
@@ -82,7 +82,7 @@ export const Header = () => {
           </nav>
         </div>
         <div className="ml-auto h-full flex items-center">
-          <Link className="text-sm mr-6" href="#">
+          <Link className="text-md mr-6" href="#">
             Login
           </Link>
           <Button href="#">Signup</Button>
