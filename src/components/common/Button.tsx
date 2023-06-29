@@ -1,9 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
+import classNames from "classnames";
 
 export interface ButtonProps extends VariantProps<typeof buttonClasses> {
   children: React.ReactNode;
+  className?: string;
   href: string;
 }
 
@@ -32,8 +34,12 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   variant,
   size,
+  className,
 }) => (
-  <Link className={buttonClasses({ variant, size })} href={href}>
+  <Link
+    className={classNames(buttonClasses({ variant, size }), className)}
+    href={href}
+  >
     {children}
   </Link>
 );
